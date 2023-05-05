@@ -23,7 +23,7 @@ int index;
                         try
                         {
                             Class.forName("com.mysql.jdbc.Driver");
-                            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+                            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
                             String ss;
                             stt=conn.createStatement();
                             ss="select * from bus_booking where User='"+jLabel2.getText()+"'";
@@ -219,7 +219,7 @@ int index;
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s;
             st=con.createStatement();
             s="select * from bus_detail where Source='"+cb1.getSelectedItem()+"' and Destination='"+cb2.getSelectedItem()+"'";
@@ -302,7 +302,7 @@ int index;
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
                 st=con.createStatement();    
                 String s;
                 s= "select * from bus_booking where Bus_no ='"+bus_no+"' and User='"+booking_user+"'";
@@ -335,7 +335,7 @@ int index;
                         try
                         {
                             Class.forName("com.mysql.jdbc.Driver");
-                            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+                            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
                             String ss;
                             stt=conn.createStatement();
                             ss="select * from bus_booking where User='"+jLabel2.getText()+"'";

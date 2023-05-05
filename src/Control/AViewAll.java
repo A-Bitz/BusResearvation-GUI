@@ -16,7 +16,7 @@ public class AViewAll extends javax.swing.JInternalFrame {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s;
             st=con.createStatement();
             s="select * from admin";

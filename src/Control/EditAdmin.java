@@ -12,7 +12,7 @@ public class EditAdmin extends javax.swing.JInternalFrame {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s;
             st=con.createStatement();
             s="select * from admin where Username='"+u+"'";
@@ -132,7 +132,7 @@ public class EditAdmin extends javax.swing.JInternalFrame {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s="0";
             st=con.createStatement(); 
             s="update admin set Password='"+jPasswordField2.getText()+"' where Password='"+jTextField1.getText()+"'"; 

@@ -16,7 +16,7 @@ String busno;
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s;
             st=con.createStatement();
             s="select * from bus_detail";
@@ -238,7 +238,7 @@ String busno;
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s;
             st=con.createStatement();
             s="select * from bus_detail where Bus_No='"+busno+"'";
@@ -286,7 +286,7 @@ String busno;
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
             String s="0";
             st=con.createStatement(); 
             s="update bus_detail set Bus_No='"+t1.getText()+"',Source='"+cb1.getSelectedItem()+"',Destination='"+cb2.getSelectedItem()+"',Time='"+t2.getText()+"',Price="+Integer.parseInt(t5.getText())+",Seats="+Integer.parseInt(t6.getText())+" where Bus_No='"+busno+"'"; 
@@ -306,7 +306,7 @@ String busno;
                 try
                 {
                     Class.forName("com.mysql.jdbc.Driver");
-                    conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+                    conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
                     String ss;
                     stt=con.createStatement();
                     ss="select * from bus_detail";
@@ -331,7 +331,7 @@ String busno;
                 try
                 {
                     Class.forName("com.mysql.jdbc.Driver");
-                    conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","5101");
+                    conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
                     String ss;
                     stt=con.createStatement();
                     ss="select * from bus_detail";
