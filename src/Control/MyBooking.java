@@ -15,20 +15,25 @@ public class MyBooking extends javax.swing.JInternalFrame {
         Connection con; // Declare a Connection object
         Statement st; // Declare a Statement object
         ResultSet rs; // Declare a ResultSet object
-        try
-        {
-            Class.forName("com.mysql.jdbc.Driver"); // Load the JDBC driver for MySQL
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345"); // Establish a connection to the MySQL database
-            String s; // Declare a string variable to hold the SQL query
-            st=con.createStatement(); // Create a Statement object for the connection
-            s="select * from bus_booking where User='"+u+"'"; // Build the SQL query to select all the rows from the bus_booking table where the User column equals the user ID passed as a parameter
-            rs=st.executeQuery(s); // Execute the query and store the results in the ResultSet object
-            DefaultTableModel model=(DefaultTableModel) jTable1.getModel(); // Retrieve the DefaultTableModel object of jTable1
-            while(rs.next()) // Iterate over the rows in the ResultSet object
-            {
-                // Add a row to the table model with the data from the current row of the ResultSet object
-                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});
-            }
+        try {
+        // Load the JDBC driver for MySQL
+        Class.forName("com.mysql.jdbc.Driver");
+        // Establish a connection to the MySQL database
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/busmanage","root","12345");
+        String s; // Declare a string variable to hold the SQL query
+        // Build the SQL query to select all the rows from the bus_booking table where the User column equals the user ID passed as a parameter
+        s = "select * from bus_booking where User='" + u + "'";
+        // Create a Statement object for the connection
+        st = con.createStatement();
+        // Execute the query and store the results in the ResultSet object
+        rs = st.executeQuery(s);
+        // Retrieve the DefaultTableModel object of jTable1
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        // Iterate over the rows in the ResultSet object
+        while (rs.next()) {
+            // Add a row to the table model with the data from the current row of the ResultSet object
+            model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});
+        }
         }
         catch(Exception  e)
         {
