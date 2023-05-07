@@ -57,6 +57,7 @@ Admin Control Panel has much more functionalities than the user control panel.
 <p align="center">
   <img src="/readme_images/10.png" width="600">
 </p>
+
 ## Usage
 To use the Bus Booking Management System, follow these steps:
 
