@@ -9,6 +9,11 @@ Bus schedule management: Add, edit, and delete bus schedules, including departur
 User management: Allow users to sign up, sign in, and manage their profiles, including personal information and booking history.
 Booking management: Allow users to search for available buses, book seats on buses, and view their booking history.
 Admin management: Allow administrators to view all users' bookings and manage bus schedules and routes, including adding, editing, and deleting routes and schedules.
+## Screenshots
+![Login page](./images/1.png)
+![User login](./images/3.png)
+![Bus booking](./images/3.png)
+
 ## Usage
 To use the Bus Booking Management System, follow these steps:
 
@@ -23,6 +28,7 @@ The Bus Booking Management System is built using the following technologies:
 Java
 JavaFX
 MySQL
+
 ## Contributors
 Abith
 Divya
